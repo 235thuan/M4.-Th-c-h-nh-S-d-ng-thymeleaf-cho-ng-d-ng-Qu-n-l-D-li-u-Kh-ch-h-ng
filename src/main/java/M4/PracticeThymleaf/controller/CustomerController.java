@@ -2,6 +2,7 @@ package M4.PracticeThymleaf.controller;
 
 import M4.PracticeThymleaf.model.Customer;
 import M4.PracticeThymleaf.service.CustomerServiceImpl;
+import M4.PracticeThymleaf.service.ICustomerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +14,7 @@ import java.util.List;
 
 @Controller
 public class CustomerController {
-    private CustomerServiceImpl customerService = new CustomerServiceImpl();
+    private ICustomerService customerService = new CustomerServiceImpl();
 
     @GetMapping("/")
     public String index(Model model) {
